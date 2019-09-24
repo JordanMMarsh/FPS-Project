@@ -8,6 +8,10 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+    [SerializeField] float turnSpeed = 5f;
+    [SerializeField] float damage = 10f;
+    PlayerHealth playerHealth;
+    Animator animator;
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
@@ -16,6 +20,8 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
+        playerHealth = target.GetComponent<PlayerHealth>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -47,13 +53,29 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
-        navMeshAgent.SetDestination(transform.position);
-        Debug.Log("Attacking target.");
+        animator.SetBool("isMoving", false);
+        animator.SetBool("isAttacking", true);
+        FaceTarget();
     }
 
     private void ChaseTarget()
     {
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isMoving", true);
         navMeshAgent.SetDestination(target.position);
+    }
+
+    private void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+    }
+
+    //Called by animation event during isAttacking state animation
+    public void HitTarget()
+    {
+        playerHealth.DealDamage(damage);
     }
 
     private void OnDrawGizmosSelected()
