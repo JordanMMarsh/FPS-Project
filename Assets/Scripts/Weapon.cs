@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] float fireDelay = 1f;
     private bool canShoot = true;
+    private bool fireDelayCoroutRunning = false;
+    private Coroutine fireDelayCorout;
 
     private void Start()
     {
@@ -33,9 +35,20 @@ public class Weapon : MonoBehaviour
          if (ammo.GetAmmoCount() > 0 && canShoot)
          {
             canShoot = false;
-            StartCoroutine(FireWeapon());
+            fireDelayCorout = StartCoroutine(FireWeapon());
+            fireDelayCoroutRunning = true;
          }
         
+    }
+
+    public void SwapWeapon()
+    {
+        if (fireDelayCoroutRunning)
+        {
+            StopCoroutine(fireDelayCorout);
+            fireDelayCoroutRunning = false;
+            canShoot = true;
+        }            
     }
 
     IEnumerator FireWeapon()
@@ -57,6 +70,7 @@ public class Weapon : MonoBehaviour
         }
 
         yield return new WaitForSeconds(fireDelay);
+        fireDelayCoroutRunning = false;
         canShoot = true;
     }
 

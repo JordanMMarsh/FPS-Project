@@ -20,6 +20,7 @@ public class Ammo : MonoBehaviour
     public void UseAmmo(int bullets)
     {
         ammo -= bullets;
+        Debug.Log(name + " has " + ammo + " bullets remaining.");
         if (ammo < 0) { ammo = 0; }
     }
 }

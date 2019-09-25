@@ -1112,6 +1112,18 @@ MonoBehaviour:
   zoomedOutSensitivity: 2
   cam: {fileID: 978585251}
   fpsController: {fileID: 1460725166}
+--- !u!114 &1292538533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 57205011, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292538530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1ee5d1608a8745836b7b178d51f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1292538535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,6 +1241,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingAmmo: 10
+--- !u!114 &1348621001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8640504271337935766, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348620997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1ee5d1608a8745836b7b178d51f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378430808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9026622598207310969, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
@@ -1266,6 +1290,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingAmmo: 10
+--- !u!114 &1378430812 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1818475513462815279, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378430808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1ee5d1608a8745836b7b178d51f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454640420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,15 +1386,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1460725165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb154167db48d14895ade78e882de79, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c5589d5210331e49811ae9099046c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fovOnZoom: 30
-  defaultFOV: 60
-  zoomedInSensitivity: 0.5
-  zoomedOutSensitivity: 2
-  cam: {fileID: 978585251}
-  fpsController: {fileID: 0}
+  weapons:
+  - {fileID: 1292538533}
+  - {fileID: 1348621001}
+  - {fileID: 1378430812}
 --- !u!1 &1531342507
 GameObject:
   m_ObjectHideFlags: 0

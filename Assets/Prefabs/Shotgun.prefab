@@ -246,7 +246,6 @@ GameObject:
   - component: {fileID: 5016256784855982393}
   - component: {fileID: 5016256784854852601}
   - component: {fileID: 5960550598733582557}
-  - component: {fileID: 6709209920737201356}
   - component: {fileID: 1442505688196417642}
   m_Layer: 0
   m_Name: Shotgun
@@ -335,31 +334,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 8937010730837486677, guid: 7f23ba25175da1948b0458b3c8cc4303,
     type: 3}
-  range: 100
+  range: 25
   damage: 20
   muzzleFlash: {fileID: 7921832753621403611}
   terrainHitFX: {fileID: 8365798195491473822, guid: 55e2c52a948c93e43a99d0c06fed0831,
     type: 3}
   fireDelay: 1
---- !u!114 &6709209920737201356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016256784852598073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb154167db48d14895ade78e882de79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fovOnZoom: 30
-  defaultFOV: 60
-  zoomedInSensitivity: 0.5
-  zoomedOutSensitivity: 2
-  cam: {fileID: 8937010730837486677, guid: 7f23ba25175da1948b0458b3c8cc4303, type: 3}
-  fpsController: {fileID: 7222997563019058043, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
-    type: 3}
 --- !u!114 &1442505688196417642
 MonoBehaviour:
   m_ObjectHideFlags: 0
