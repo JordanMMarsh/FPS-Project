@@ -1088,6 +1088,43 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1292538530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923501550935713176, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292538532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292538530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb154167db48d14895ade78e882de79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fovOnZoom: 30
+  defaultFOV: 60
+  zoomedInSensitivity: 0.5
+  zoomedOutSensitivity: 2
+  cam: {fileID: 978585251}
+  fpsController: {fileID: 1460725166}
+--- !u!114 &1292538535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292538530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee026d78e4ed645b06489bea5fd390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 10
 --- !u!4 &1322860482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 88b5bfec6f1bd17439b2f4339902dca6,
@@ -1155,6 +1192,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b321aed21e0872743a175d8dbbe12ac8, type: 3}
+--- !u!1 &1348620997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6975036910496267890, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1348620999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348620997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb154167db48d14895ade78e882de79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fovOnZoom: 30
+  defaultFOV: 60
+  zoomedInSensitivity: 0.5
+  zoomedOutSensitivity: 2
+  cam: {fileID: 978585251}
+  fpsController: {fileID: 1460725166}
+--- !u!114 &1348621000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348620997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee026d78e4ed645b06489bea5fd390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 10
+--- !u!1 &1378430808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9026622598207310969, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1378430810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378430808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb154167db48d14895ade78e882de79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fovOnZoom: 30
+  defaultFOV: 60
+  zoomedInSensitivity: 0.5
+  zoomedOutSensitivity: 2
+  cam: {fileID: 978585251}
+  fpsController: {fileID: 1460725166}
+--- !u!114 &1378430811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378430808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee026d78e4ed645b06489bea5fd390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 10
 --- !u!1 &1454640420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1314,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7222997563030697315}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1460725166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7222997563019058043, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7222997563030697315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460725165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1460725169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,7 +1355,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fovOnZoom: 30
   defaultFOV: 60
+  zoomedInSensitivity: 0.5
+  zoomedOutSensitivity: 2
   cam: {fileID: 978585251}
+  fpsController: {fileID: 0}
 --- !u!1 &1531342507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2273,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4923501550935713176, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 57205011, guid: ed4f56efd91416f4b96bab9cf69b4c9b, type: 3}
+      propertyPath: terrainHitFX
+      value: 
+      objectReference: {fileID: 8365798195491473822, guid: 55e2c52a948c93e43a99d0c06fed0831,
+        type: 3}
+    - target: {fileID: 5737641239918286050, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640504271337935766, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+        type: 3}
+      propertyPath: terrainHitFX
+      value: 
+      objectReference: {fileID: 8365798195491473822, guid: 55e2c52a948c93e43a99d0c06fed0831,
+        type: 3}
+    - target: {fileID: 9026622598207310969, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818475513462815279, guid: ed4f56efd91416f4b96bab9cf69b4c9b,
+        type: 3}
       propertyPath: terrainHitFX
       value: 
       objectReference: {fileID: 8365798195491473822, guid: 55e2c52a948c93e43a99d0c06fed0831,
