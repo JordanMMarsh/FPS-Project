@@ -10,7 +10,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 10f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject terrainHitFX;
-    Ammo ammo;
+    [SerializeField] GameObject player;
+    AmmoManager ammoManager;
+    public AmmoType ammoType;
 
     [SerializeField] float fireDelay = 1f;
     private bool canShoot = true;
@@ -19,7 +21,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        ammo = GetComponent<Ammo>();
+        ammoManager = player.GetComponent<AmmoManager>();
     }
 
     void Update()
@@ -32,7 +34,7 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-         if (ammo.GetAmmoCount() > 0 && canShoot)
+         if (ammoManager.GetAmmoCount(ammoType) > 0 && canShoot)
          {
             canShoot = false;
             fireDelayCorout = StartCoroutine(FireWeapon());
@@ -53,7 +55,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator FireWeapon()
     {
-        ammo.UseAmmo(1);
+        ammoManager.Fire(ammoType);
         muzzleFlash.Play();
 
         RaycastHit hit;

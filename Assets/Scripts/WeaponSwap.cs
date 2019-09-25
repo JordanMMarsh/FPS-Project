@@ -6,11 +6,24 @@ public class WeaponSwap : MonoBehaviour
 {
     [SerializeField] Weapon[] weapons;
     Weapon currentWeapon;
+    AmmoManager ammoManager;
     int weaponIndex = 0;
+
+    private void Awake()
+    {
+        ammoManager = GetComponent<AmmoManager>();
+        currentWeapon = weapons[weaponIndex];
+        for (var i = 0; i < weapons.Length; i++)
+        {
+            if (i != 0)
+            {
+                weapons[i].gameObject.SetActive(false);
+            }
+        }
+    }
 
     private void Start()
     {
-        currentWeapon = weapons[weaponIndex];
         SwapWeapons();
     }
 
@@ -38,5 +51,16 @@ public class WeaponSwap : MonoBehaviour
         currentWeapon.gameObject.SetActive(false);
         currentWeapon = weapons[weaponIndex];
         currentWeapon.gameObject.SetActive(true);
+        ammoManager.UpdateAmmoText();
+    }
+
+    public Weapon GetCurrentWeapon()
+    {
+        return currentWeapon;
+    }
+
+    public Weapon[] GetWeapons()
+    {
+        return weapons;
     }
 }
